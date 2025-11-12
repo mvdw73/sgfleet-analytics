@@ -1,0 +1,4 @@
+database: data/db/lease_analytics.db
+data_dir: data/raw
+log_file: lease_analytics.log
+log_level: INFO

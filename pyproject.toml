@@ -1,0 +1,48 @@
+[project]
+name = "lease-analytics"
+version = "0.1.0"
+description = "Car lease analytics and dashboard — fuel economy, km/month, and cost insights."
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+
+dependencies = [
+    "pandas>=2.2",
+    "sqlalchemy>=2.0",
+    "plotly>=5.24",
+    "nicegui>=2.0",
+    "pyyaml>=6.0",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "black>=24.0",
+    "ruff>=0.5",
+    "ipython",
+]
+
+[project.scripts]
+lease-analytics = "lease_analytics.__main__:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ['py312']
+
+[tool.pytest.ini_options]
+testpaths = ["lease_analytics/tests"]
+python_files = ["test_*.py"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
