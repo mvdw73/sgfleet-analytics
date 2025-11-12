@@ -8,7 +8,7 @@ and spending categories — with a NiceGUI + Plotly dashboard.
 ```bash
 uv venv
 uv pip install -e .[dev]
-uv run lease-analytics --gui
+uv run analytics --gui
 ```
 
 Data is stored in `data/db/lease_analytics.db` and imported from `data/raw/*.csv`.
